@@ -27,10 +27,9 @@
     </parent>
 
     <modules>
-        <module>register-server</module>
         <module>producer</module>
         <module>consumer</module>
-        <module>registerServer</module>
+        <module>register-server</module>
     </modules>
 
     <dependencies>
