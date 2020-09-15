@@ -1,0 +1,23 @@
+#注册中心服务ID
+spring:
+   application:
+      name: producer
+   cloud:
+      config:
+         discovery:
+            #启动服务发现的功能，开启了才能调用其它服务
+            enabled: true
+            #发现的服务的名字--对应注测中心的服务名字
+            serviceId: register-server
+
+
+#端口号
+server:
+   port: 8700
+# eureka.client.registerWithEureka ：表示是否将自己注册到Eureka Server，默认为true。
+# 由于当前这个应用就是Eureka Server，故而设为false
+eureka:
+   client:
+      serviceUrl:
+         # eureka.client.serviceUrl.defaultZone ：设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是
+         defaultZone: http://192.168.8.230:8800/eureka/      
